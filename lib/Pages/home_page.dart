@@ -55,23 +55,24 @@ class _HomePageState extends State<HomePage> {
         children: [
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20,
+              padding: const EdgeInsets.only(
+                left: 40,
+                right: 20,
               ),
               child: TextField(
                 controller: _controller,
                 decoration: InputDecoration(
                   hintText: 'Add a new ToDo',
                   filled: true,
-                  fillColor: Colors.white54,
+                  fillColor: Colors.white,
                   enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
+                    borderSide: BorderSide(
                       color: Colors.white,
                     ),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
+                    borderSide: BorderSide(
                       color: Colors.white,
                     ),
                     borderRadius: BorderRadius.circular(15),
@@ -82,7 +83,7 @@ class _HomePageState extends State<HomePage> {
           ),
           FloatingActionButton(
             onPressed: saveNewTask,
-            child: const Icon(Icons.add),
+            child: Icon(Icons.add),
           ),
         ],
       ),
